@@ -10,7 +10,7 @@ Make sure to add your environemnt variables in the root of the project.
 # Install dependencies for server
 npm install
 
-# Install dependencies for client
+# Install dependencies for frontend
 npm run client-install
 
 # Run the client & server with concurrently
