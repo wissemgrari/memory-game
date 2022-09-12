@@ -28,7 +28,7 @@ function Game() {
   const [disabled, setDisabled] = useState(false);
   const [isStarted, setIsStarted] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
-  const { name, score } = useSelector((state) => state.user);
+  const { name } = useSelector((state) => state.user);
 
   // Shuffle cards
   const shuffleCards = () => {
@@ -78,6 +78,7 @@ function Game() {
         }
       }
     }
+    // eslint-disable-next-line
   }, [choiceOne, choiceTwo, isStarted]);
 
   // reset choices & increase turn
@@ -127,7 +128,7 @@ function Game() {
         });
       }, 200);
     }
-  }, [isStarted, cards, isCompleted]);
+  }, [isStarted, cards, isCompleted, name.firstName, name.lastName, turns]);
 
   return (
     <div className='game'>
