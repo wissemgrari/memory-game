@@ -5,13 +5,15 @@ import Spinner from '../components/Spinner/Spinner';
 
 import axios from 'axios';
 
+const API_URL = 'https://memorygame-server.up.railway.app';
+
 function Stats() {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
   const getUsers = async () => {
-    const res = await axios.get('/api/');
+    const res = await axios.get(`${API_URL}/api/`);
     if (res.status === 200) {
       const { data } = res;
       setUsers(data);

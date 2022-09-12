@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
+const API_URL = 'https://memorygame-server.up.railway.app';
+
 import '../App.css';
 import SingleCard from '../components/SingleCard';
 import { setScore } from '../features/user/userSlice';
@@ -104,7 +106,7 @@ function Game() {
     }
 
     if (isCompleted) {
-      axios.post('/api/', {
+      axios.post(`${API_URL}/api/`, {
         firstName: name.firstName,
         lastName: name.lastName,
         score: turns,
