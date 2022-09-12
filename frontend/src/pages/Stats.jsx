@@ -64,8 +64,8 @@ function Stats() {
         </thead>
         <tbody>
           {users
-            .sort((a, b) => a.score - b.score)
-            .map((user, index) => (
+            ?.sort((a, b) => a.score - b.score)
+            ?.map((user, index) => (
               <tr key={user._id}>
                 <td>{index === 0 ? <FaTrophy /> : index + 1}</td>
                 <td>{user.firstName}</td>
