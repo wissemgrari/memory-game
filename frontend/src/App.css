@@ -1,0 +1,334 @@
+.App {
+  max-width: 860px;
+  margin: 0px auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling the Dashboard component */
+.dashboard h2 {
+  letter-spacing: 1px;
+}
+.dashboard img {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.wrapper p {
+  opacity: 50%;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.wrapper form {
+  width: 450px;
+  border: 2px solid #c23866;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+form .form-group {
+  margin: 30px 0;
+  width: 100%;
+}
+
+.form-group .form-control {
+  border-radius: 18px;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #c23866;
+  padding: 15px;
+  width: 85%;
+}
+
+.form-group .btn {
+  width: 90%;
+  background: none;
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.btn:hover {
+  background: #c23866;
+  color: #fff;
+}
+
+/* Styling the Game component */
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game h2 {
+  margin-top: 40px;
+  font-size: 1.3em;
+  opacity: 50%;
+  text-transform: capitalize;
+}
+.game .options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 450px;
+  gap: 20px;
+}
+
+.game button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+.game button:hover {
+  background: #c23866;
+  color: #fff;
+}
+.game .header {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.game .divider {
+  width: 100%;
+  margin: 15px;
+  border-bottom: 2px solid #fff;
+}
+.header button {
+  padding: 10px 15px;
+}
+.header button:nth-of-type(2) {
+  background-color: #c23866;
+  color: #fff;
+}
+.card-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Customize the stats component */
+table {
+  margin-top: 50px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #c23866;
+}
+.stats button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background: #c23866;
+  color: #fff;
+}
+.stats .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+footer {
+  margin-top: auto;
+  padding: 10px 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 440px) {
+  .App {
+    max-width: 400px;
+    max-height: 80vh;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    font-size: 1.2rem;
+  }
+  .dashboard h2 {
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+  }
+  .wrapper p {
+    opacity: 50%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  .wrapper form {
+    width: 350px;
+    border: 2px solid #c23866;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .game {
+    max-width: 400px;
+    margin: 10px auto;
+  }
+  .game .options {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+  }
+  table {
+    max-width: 400px;
+  }
+  table th,
+  td {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+  table tr {
+    padding: 10px;
+  }
+  .stats button {
+    font-size: 1rem;
+    background: none;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .App {
+    max-width: 310px;
+    height: 90vh;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    font-size: 1rem;
+  }
+  .dashboard h2 {
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+  }
+  .wrapper p {
+    opacity: 50%;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+  .wrapper form {
+    width: 290px;
+    border: 2px solid #c23866;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .game {
+    max-width: 290px;
+    margin: 10px auto;
+  }
+  .game .header {
+    margin: 10px;
+    max-width: 290px;
+    font-size: 1rem;
+  }
+  .header button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  .card-grid {
+    gap: 10px;
+  }
+  .game h2 {
+    font-size: 1.3rem;
+  }
+  .game .options {
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+  }
+  table {
+    max-width: 310px;
+  }
+  table th,
+  td {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+  table tr {
+    padding: 10px;
+  }
+  .header .title {
+    font-size: 0.9rem;
+  }
+  .header svg {
+    width: 30px;
+  }
+  .stats {
+    padding: 10px;
+  }
+
+  .stats .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .stats button {
+    font-size: 0.8rem;
+    background: none;
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
